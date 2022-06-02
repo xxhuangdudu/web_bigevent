@@ -16,7 +16,7 @@ const renderAvatar=(user)=>{
     // 渲染欢迎语
     $('#welcome').html(`欢迎 ${uname}`)
     // 渲染头像
-    if(user,user_pic !==null){
+    if(user.user_pic !==null){
         $('.layui-nav-img').attr('src',user.user_pic)
         $('.text-avatar').hide()
     }else{
@@ -33,3 +33,6 @@ $('#btnLogout').click(()=>{
     })
 })
 getUserInfo()
+function change(){
+    $('#change').attr('class','layui-this').next().attr('class','')
+}
